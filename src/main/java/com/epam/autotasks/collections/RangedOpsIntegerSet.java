@@ -1,7 +1,4 @@
 package com.epam.autotasks.collections;
-
-
-
 import java.util.*;
 
 
@@ -21,14 +18,14 @@ class RangedOpsIntegerSet extends AbstractSet<Integer> {
 
     public boolean remove(int fromInclusive, int toExclusive) {
 
-        int counter = 0;
+        boolean flag = false;
         for(int i = fromInclusive; i < toExclusive; i++){
             if(set.contains(i)){
                 set.remove(i);
-                counter++;
+                flag = true;
             }
         }
-    return counter>0;
+    return flag;
     }
 
 
